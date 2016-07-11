@@ -1,0 +1,1601 @@
+/* ------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Lendingreal
+Version:	1.0
+
+[colors]
+
+background beige: #eef1ec
+
+[Fonts]
+HelveticaNeue
+didot
+
+[Table of contents]
+
+- Fonts
+
+1. Body
+  1.1 Helper CSS
+2. Header
+  2.1 Navigation
+  2.2 Login Modal
+3. Footer
+4. Carousel Image Gallery
+5. Slider
+6. Map
+  6.1 Search Form
+  6.3 Map Box
+  6.3 Deal Boxes
+7. Stats Info
+8. Pages
+  8.1 Main Page
+  8.2 About Page
+    8.2.1 Contact Form
+    8.2.2 Team Info
+  8.3 Broker/Investor Pages
+    8.3.1 intro box
+    8.3.2 tutorial box
+    8.3.3 features box
+    8.3.4 testimonial box
+    8.3.5 FAQ
+9. Responsive layout
+------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------
+  [Fonts]
+*/
+@font-face {
+  font-family: didot;
+  src: url(/src/fonts/didot.ttf);
+}
+
+/* ------------------------------------------------------------------
+  [1. Body]
+*/
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  color: #0f5f5c;
+  font-size: 32px;
+  padding-bottom: 17px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  width: 65px;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  background-color: #6fb048;
+  transform: translate(-50%, 0);
+}
+
+/* -------------
+ [1.1 Helper css] */
+.green-btn {
+  background-color: #6fb048;
+  font-size: 23px;
+  color: white !important;
+  font-weight: 100;
+  letter-spacing: 3px;
+  border: none;
+}
+
+.map-toggle-hover {
+  background-color: #def3ff;
+  border-color: #60c1f7;
+}
+
+.background-beige {
+  background-color: #eef1ec;
+}
+
+/* ------------------------------------------------------------------
+  [2. HEADER]
+*/
+
+/* Custom page header */
+.header {
+  color: #e1e1e1;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* ------------------
+  [2.1 Navigation] */
+
+/* Bootstrap navbar override */
+.navbar {
+  margin-bottom: 0;
+  border: none;
+}
+
+.navbar-default .navbar-brand {
+  height: 108px;
+  line-height: 108px;
+  padding-top: 27px;
+  margin-right: 17.5px;
+  color: black;
+  font-style: bold;
+  font-family: HelveticaNeue;
+}
+
+.navbar-brand > img {
+  height: 55px;
+}
+
+a.nav-phone,
+.nav-phone span {
+  color: black;
+}
+
+.nav-phone span.glyphicon {
+  top: 3px;
+  padding: 0 7px 0 17.5px;
+  border-left: solid 1px #b2b5b4;
+}
+
+.nav-phone .phone-number {
+  font-size: 11px;
+}
+
+.navbar-default {
+  background: transparent;
+  color: #e1e1e1;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #717171;
+  padding: 0;
+  height: 108px;
+  line-height: 108px;
+  font-size: 16px;
+}
+
+.navbar-default .navbar-right > li > a {
+  margin-left: 30px;
+  letter-spacing: 1px;
+}
+
+.navbar-default .navbar-right > li > a button {
+  background-color: transparent;
+  border-radius: 0;
+  color: #717171;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  position: relative;
+  top: -2px;
+  letter-spacing: 1px;
+}
+
+/* ------------------
+  [2.2 Login Modal] */
+
+.modal-dialog {
+  max-width: 430px;
+}
+
+.modal-content {
+  box-shadow: none;
+}
+
+.login-modal .modal-header {
+  border-bottom: none;
+  padding: 35px 43px 0;
+}
+
+.login-modal .modal-title {
+  border-bottom: solid 1px #f1f1f1;
+  padding-bottom: 13px;
+}
+
+.login-modal .modal-body {
+  padding: 16px 43px 27px;
+}
+
+.login-modal .modal-body .login-form label,
+.login-modal .modal-body .login-form input {
+  display: block;
+}
+
+.login-modal .modal-body .login-form label {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.login-modal .modal-body .login-form input {
+  margin-bottom: 15px;
+  height: 45px;
+  line-height: 44px;
+  padding: 5px;
+  width: 100%;
+  border: solid 1px #dbdbdb;
+}
+
+.login-modal .modal-body .login-action {
+  font-family: HelveticaNeue;
+  padding: 10px 0;
+}
+
+.login-modal .modal-body .login-action a {
+  font-style: italic;
+  font-size: 12px;
+  color: #888;
+  line-height: 44px;
+  text-decoration: none;
+}
+
+.login-modal .modal-body .login-action button {
+  color: white;
+  font-size: 16px;
+  background-color: #12d59c;
+  width: 170px;
+  height: 44px;
+  border-radius: 0;
+}
+
+.login-modal .modal-body .socal-media-login {
+  margin-top: 15px;
+  width: 100%;
+  height: 44px;
+  padding-left: 98px;
+  color: white;
+  font-size: 14px;
+  border-radius: 0;
+  font-weight: lighter;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.login-modal .modal-body .socal-media-login img {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 35px;
+  z-index: 999;
+}
+
+.login-modal .modal-body .socal-media-login::before {
+  content: "";
+  background-color: #0077b5;
+  width: 85px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.login-modal .modal-body .socal-media-login span {
+  font-weight: bold;
+}
+
+.login-modal .modal-body #linkedin-btn {
+  background-color: #00a0dc;
+}
+
+.login-modal .modal-footer {
+  text-align: center;
+  padding: 23px 0;
+}
+
+.login-modal .modal-footer a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+}
+
+/* ------------------------------------------------------------------
+  [3. Footer]
+*/
+.footer {
+  padding: 65px 80px;
+  color: #777;
+  background-color: #222;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* ------------------------------------------------------------------
+  [4. Carousel Image Gallery]
+*/
+.carousel-control {
+  top: 50%;
+  width: 47px;
+  height: 53px;
+  background-color: black;
+}
+
+.carousel-control .glyphicon {
+  margin-top: -15px;
+  font-weight: lighter;
+}
+
+.carousel-inner > .item > img {
+  max-width: auto;
+  width: 100%;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-inner p {
+  position: absolute;
+  top: 45%;
+  text-align: center;
+  width: 100%;
+}
+
+.carousel-inner p span {
+  display: block;
+  width: 725px;
+  margin: 0 auto;
+}
+
+.carousel-inner p .image_title {
+  font-family: didot;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.carousel-inner p .image_subtitle {
+  clear: both;
+  color: white;
+  font-size: 20px;
+}
+
+.icon_scroll {
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  z-index: 9999;
+  margin-left: 49%;
+}
+
+.carousel-indicators {
+  visibility: hidden;
+}
+
+/* ------------------------------------------------------------------
+  [5. Slider]
+*/
+.search-slider {
+  position: absolute;
+  top: 27px;
+  left: 5%;
+  width: 100%;
+}
+
+.ui-slider-tick {
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  top: 10px;
+}
+
+.ui-slider-tick .tip {
+  color: #aaa;
+  font-size: 5px;
+  position: relative;
+  left: -1px;
+  text-align: center;
+}
+
+.ui-slider-tick .tick-number {
+  position: relative;
+  left: -5px;
+  font-size: 10px;
+}
+
+.ui-slider-tick span {
+  display: block;
+  color: black;
+}
+
+.ui-slider {
+  position: relative;
+  height: 0;
+  border: solid 2px lightgray;
+  width: 90%;
+}
+
+.ui-slider .ui-slider-range {
+  border: solid 2px #6fb048;
+  top: -2px;
+  position: absolute;
+}
+
+.ltv .ui-slider-range {
+  left: -1px;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -8px;
+  border: solid 4px #6fb048;
+  border-radius: 50%;
+  background-color: white;
+  background-image: none;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  display: block;
+  margin-left: -7px;
+}
+
+.ui-slider-horizontal .ui-slider-handle:focus {
+  outline: 0;
+  border-color: gold;
+}
+
+.ui-slider-out-of-bounds {
+  position: absolute;
+  background-color: #eee;
+  height: 100%;
+}
+
+/* ------------------------------------------------------------------
+  [6. Map]
+*/
+
+/* ----------------
+  [6.1 Search Form]
+*/
+.search-map {
+  padding-top: 112px;
+}
+
+.search-map .dropdown-menu {
+  height: 76px;
+  background-color: #f4f4f4;
+  padding: 18px 25px 10px;
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+
+.search-map .dropdown-menu li {
+  display: table-cell;
+  padding-top: 10px;
+}
+
+.search-map .dropdown-menu label {
+  padding: 0 15px 0 5px;
+  font-weight: normal;
+  margin-left: 20px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.search-form {
+  margin-top: 35px;
+  position: relative;
+}
+
+.search-form .search-deal {
+  border: solid 1px #dcdcdc;
+  position: relative;
+  width: 20%;
+  height: 63px;
+}
+
+.search-form .select-btn {
+  width: 20%;
+  height: 63px;
+  border: solid 1px #dcdcdc;
+}
+
+.search-form .select-btn .slider-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.search-form .select-btn span.glyphicon {
+  font-size: 24px;
+  color: #bbb;
+  position: absolute;
+  top: 18px;
+}
+
+.search-form .search-deal span.glyphicon {
+  top: 18px;
+  left: 18px;
+  font-size: 24px;
+  color: #bbb;
+}
+
+.search-form .search-deal input {
+  border: none;
+  padding-left: 30px;
+  font-size: 15px;
+  position: absolute;
+  left: 10%;
+  top: 20px;
+  background-color: transparent;
+}
+
+.search-form .search-deal input:focus {
+  outline: none;
+}
+
+.search-form .search-select {
+  border: none;
+  position: relative;
+  height: 63px;
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 15px;
+  line-height: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.search-form .search-select span.glyphicon {
+  right: 18px;
+}
+
+.deal-map {
+  background-color: rgba(214, 214, 214, 0.5);
+  position: relative;
+  height: 646px;
+  padding-top: 63px;
+}
+
+.search-btn {
+  position: absolute;
+  top: 60px;
+  right: 120px;
+  padding: 12px 20px;
+  font-size: 15px;
+  margin: 12px 24px;
+  z-index: 999;
+}
+
+/* ----------------
+  [6.3 Map Box]
+*/
+.map-box {
+  width: 50%;
+}
+
+.map_toggle {
+  margin: 12px 10px 0 0;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  z-index: 999;
+}
+
+.map_toggle button {
+  height: 42px;
+  width: 42px;
+  font-size: 20px;
+  border-radius: 0;
+}
+
+.map_toggle button span {
+  margin: 3px 0 0 -2px;
+}
+
+/* ----------------
+  [6.3 Deal Box]
+*/
+.deal-box {
+  height: 577px;
+  width: calc(50% - 25px);
+  margin-left: 25px;
+  overflow: auto;
+}
+
+.deal-box .deal {
+  background-color: white;
+  margin: 0 12px 12px 0;
+  border-right: solid 5px #0f5f5c;
+  overflow: auto;
+}
+
+.deal-box .deal .deal-img {
+  position: relative;
+}
+
+.deal-box .deal .deal-img .deal-status {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  padding: 7px;
+  color: white;
+  font-size: 10px;
+}
+
+.deal-box .deal .deal-img .new-deal {
+  background-color: #13cb97;
+}
+
+.deal-box .deal .deal-img .funded-deal {
+  background-color: purple;
+}
+
+.deal-box .deal .deal-img .expired-deal {
+  background-color: lightgray;
+}
+
+.deal-box .deal .deal-detail {
+  padding: 15px 20px 0;
+}
+
+.deal-box .deal .deal-detail h5 {
+  font-size: 24px;
+  color: #f9c906;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.deal-box .deal .deal-detail h5 span {
+  color: black;
+}
+
+.deal-box .deal .deal-detail p {
+  color: #020202;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.deal-box .deal .deal-detail p span {
+  color: lightgray;
+}
+
+.map-box {
+  position: absolute;
+  right: 0;
+}
+
+.angular-google-map-container {
+  height: 575px;
+}
+
+/* ------------------------------------------------------------------
+  [7. Stats Info]
+*/
+.stats-info {
+  padding: 80px 80px 61px;
+}
+
+.stats-info p {
+  color: #83a7a5;
+  font-size: 13px;
+}
+
+.stats-info a {
+  background-color: transparent;
+  color: #83a7a5;
+  display: inline-block;
+  border: solid 1px #83a7a5;
+  border-radius: 2px;
+  padding: 10px 15px;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.stats-number {
+  margin-bottom: 48px;
+}
+
+.stats-number p {
+  color: #83a7a5;
+  font-size: 1.21vw;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.stats-number p::after {
+  content: '';
+  width: 54px;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background-color: #979797;
+}
+
+.stats-number span {
+  color: #0f5f5c;
+  font-size: 3.8vw;
+}
+
+.learn-more {
+  padding: 88px 80px 113px;
+}
+
+.learn-more span.glyphicon {
+  color: #004b62;
+  font-size: 36px;
+}
+
+.learn-more ul {
+  margin-top: 35px;
+  padding-left: 0;
+}
+
+.learn-more ul li {
+  list-style: none;
+  color: #626262;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+.learn-more ul li:first-child {
+  color: #2c2c2c;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.learn-more ul li:first-child::after {
+  content: ">";
+  text-align: right;
+  width: 20%;
+  display: inline-block;
+  position: relative;
+  bottom: 2px;
+}
+
+.learn-more a {
+  color: #a8a8a8;
+  font-size: 14px;
+}
+
+/* ------------------------------------------------------------------
+  [8. Pages]
+*/
+
+/* --------------
+  [8.1 Main Page]
+*/
+
+/* --------------
+  [8.2 About Page]
+*/
+#aboutControl h1 {
+  text-align: center;
+  color: white;
+}
+
+.lead-text {
+  padding: 80px 80px 63px;
+  font-size: 20px;
+  line-height: 29px;
+  color: #494949;
+}
+
+.about-head {
+  padding: 140px 0;
+  max-height: 310px;
+  font-size: 40px;
+  background-image: url(/images/about_head.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+/* --------------
+  [8.2.1 About Page Contact Form ]
+*/
+.contact {
+  padding: 80px 0 57px;
+}
+
+.contact .form-content {
+  max-width: 946px;
+  margin: 11px auto 0;
+}
+
+.contact .form-content p.form-intro {
+  color: #11bd9b;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.contact .contact-form p.form-msg {
+  color: white;
+  font-size: 14px;
+  line-height: 26px;
+  background-color: #6fb048;
+  padding: 21px;
+}
+
+.contact .contact-form p.form-msg a {
+  color: white;
+  float: right;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.contact .form-content p.form_intro {
+  margin: 10px 0 20px;
+}
+
+.contact .form-content form {
+  width: 50%;
+  float: right;
+  margin-right: 10%;
+}
+
+.contact .form-content form fieldset {
+  position: relative;
+}
+
+.contact .form-content form label {
+  text-transform: uppercase;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  z-index: 999;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.contact .form-content form input {
+  display: block;
+  border: solid 1px black;
+  width: 100%;
+  height: 63px;
+  margin-bottom: 13px;
+  position: relative;
+  padding: 20px 8px 0;
+  font-size: 24px;
+}
+
+.contact .form-content form textarea {
+  width: 100%;
+  height: 176px;
+  border: solid 1px black;
+  padding: 20px 8px;
+}
+
+.contact .form-content button {
+  width: 200px;
+  border-radius: 2px;
+  margin-top: 30px;
+  padding: 22px 42px;
+}
+
+.contact .contact-box {
+  float: right;
+  width: 40%;
+  border: dashed 1px #c1d3d2;
+  padding: 0 40px 32px;
+  color: #0f5f5c;
+}
+
+.contact .contact-box h5 {
+  font-size: 22px;
+  margin-top: 34px;
+}
+
+.contact .contact-box .glyphicon {
+  color: #6fb048;
+  padding-right: 7px;
+}
+
+.contact .contact-box .contact-info p a {
+  font-size: 15px;
+}
+
+.contact .contact-box .phone-number {
+  color: #83a7a5;
+}
+
+.contact .contact-box .email {
+  color: #0f5f5c;
+}
+
+/* --------------
+  [8.2.1 About Page Team Info ]
+*/
+
+.team h1 {
+  height: 434px;
+  font-size: 48px;
+  padding-top: 196px;
+  margin-top: 0;
+  background-image: url(/images/about_team.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.our-story-timeline {
+  text-align: center;
+}
+
+.our-story-timeline img {
+  width: 100%;
+}
+
+.team-members {
+  padding: 138px 50px 152px;
+}
+
+.member {
+  text-align: center;
+  color: #333d45;
+  margin-top: 83px;
+}
+
+.member img {
+  width: 220px;
+  height: 220px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.member h4 {
+  font-size: 22px;
+  line-height: 26px;
+  margin-top: 22px;
+  color: black;
+}
+
+.member .member-title {
+  font-size: 17px;
+  display: block;
+  margin: 10px auto 5px;
+}
+
+.member .member-desc {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* --------------------------
+  [8.3 Broker/Investor Pages]
+*/
+
+/* --------------------------
+  [8.3.1 intro box]
+*/
+.intro-box {
+  color: black;
+  padding: 100px 0 81px;
+  font-size: 16px;
+}
+
+.intro-box h2 {
+  margin-bottom: 60px;
+}
+
+.intro-img {
+  height: 294px;
+  background-color: #cdeff8;
+}
+
+.intro-box ul {
+  padding-left: 0;
+}
+
+.intro-box ul li {
+  margin-top: 20px;
+  font-size: 14px;
+  list-style: none;
+  position: relative;
+}
+
+.intro-box ul li .disc {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-color: #eb8c01;
+  border-radius: 50%;
+  margin-right: 14px;
+  position: absolute;
+  top: 3px;
+}
+
+.intro-box ul li .disc::before {
+  content: "";
+  display: inline-block;
+  background-color: rgba(235, 140, 1, 0.3);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+.intro-box ul li .disc::after {
+  content: "";
+  display: inline-block;
+  background-color: #dc6900;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.intro-box ul li span {
+  margin-left: 35px;
+  display: inline-block;
+}
+
+/* --------------------------
+  [8.3.2 tutorial box]
+*/
+.tutorial {
+  padding: 75px 0 123px;
+  counter-reset: tutorial-counter;
+}
+
+.tutorial .steps {
+  max-width: 1140px;
+  margin: 74px auto 0;
+}
+
+.tutorial .steps div {
+  width: 50%;
+  height: 400px;
+  float: left;
+  position: relative;
+}
+
+.tutorial .steps .text {
+  background-color: #f9f9f9;
+  color: #6d6d6d;
+  counter-increment: tutorial-counter;
+}
+
+.tutorial .steps .text::before {
+  content: "0" counter(tutorial-counter);
+  font-size: 64px;
+  color: #578382;
+  position: absolute;
+  top: 40px;
+  left: 43px;
+}
+
+.tutorial .steps .text h3 {
+  font-size: 20px;
+  color: #373737;
+  padding: 167px 0 29px 18%;
+}
+
+.tutorial .steps div.text p {
+  width: 68%;
+  padding-left: 18%;
+}
+
+.tutorial .steps .image {
+  background-color: #326868;
+}
+
+.tutorial .steps:nth-child(even) .image {
+  float: right;
+}
+
+.tutorial .steps .image::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #326868;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  z-index: 999;
+}
+
+.tutorial .steps .last::after {
+  border-top-color: transparent;
+}
+
+/* --------------------------
+  [8.3.3 features box]
+*/
+.features {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.features span.glyphicon {
+  font-size: 55px;
+  padding: 85px 0 41px;
+}
+
+.features h3 {
+  color: #1d1d1d;
+  font-size: 20px;
+}
+
+/* --------------------------
+  [8.3.4 testimonial box]
+*/
+.testimonial {
+  padding: 62px 0 83px;
+  color: #4b4b4b;
+}
+
+.testimonial div {
+  margin-top: 65px;
+  padding: 0 65px 0 150px;
+  position: relative;
+  width: 27%;
+}
+
+.testimonial h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.testimonial img {
+  width: 66px;
+  height: 66px;
+  background-color: gray;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left: 50px;
+}
+
+.testimonial blockquote {
+  font-size: 12px;
+  border-left: none;
+  border-top: solid 1px #d1d1d1;
+  padding: 12px 0 0;
+}
+
+.testimonial blockquote::before {
+  content: "\201C";
+  color: #d1d1d1;
+  font-size: 75px;
+  position: absolute;
+  top: 80px;
+  left: 65px;
+  font-family: didot;
+}
+
+/* --------------------------
+  [8.3.5 FAQ]
+*/
+.faq {
+  padding: 100px 0 123px;
+}
+
+.faq h2 {
+  margin-bottom: 60px;
+}
+
+.faq .panel-default {
+  width: 86%;
+  margin: 0 auto;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.faq .panel-default > .panel-heading {
+  color: #4e4e4e;
+  border: solid 1px #d3d3d3;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.faq .panel-title {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.faq .panel-title a {
+  display: block;
+  height: 70px;
+  line-height: 70px;
+  padding-left: 20px;
+}
+
+.faq .panel-title a i {
+  position: absolute;
+  right: 20px;
+  top: 27px;
+}
+
+.faq .panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border: none;
+  color: #222;
+  font-size: 16px;
+  padding: 35px 30px;
+}
+
+/* ------------------------------------------------------------------
+  [9. Responsive Layout]
+*/
+@media screen and (min-width: 768px) {
+
+  .navbar-default .navbar-brand {
+    margin-left: 0;
+    padding-left: 65px;
+  }
+
+  .navbar-right {
+    margin-right: 15px;
+  }
+
+  .myCarousel {
+    min-height: 675px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .search-map {
+    padding-top: 42px;
+  }
+
+  .map_toggle {
+    display: none;
+  }
+
+  .search-form {
+    border-top: solid 1px #dcdcdc;
+  }
+
+  .search-form .search-deal {
+    width: 80%;
+    border-top: none;
+  }
+
+  .select-btn {
+    display: none;
+  }
+
+  .deal-box {
+    width: 278px;
+    margin: 0 auto;
+  }
+
+  .deal-box .deal {
+    border-right: none;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .deal-box .deal img,
+  .deal-box .deal .deal-detail {
+    width: 100%;
+  }
+
+  .deal-box .deal .deal-img .deal-status {
+    left: auto;
+    right: 14px;
+  }
+
+  .map-box {
+    display: none;
+  }
+
+  .testimonial div {
+    width: inherit;
+  }
+
+  .testimonial img {
+    top: 0;
+  }
+
+  .testimonial blockquote::before {
+    top: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    position: relative;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+  }
+
+  .navbar-default .navbar-brand {
+    padding: 24px;
+    height: auto;
+    line-height: 18px;
+    color: #fdfdfd;
+  }
+
+  .navbar-default .navbar-toggle {
+    margin-top: 35px;
+    border: none;
+  }
+
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+
+  .navbar-default .navbar-toggle .half-width {
+    width: 11px;
+    position: relative;
+    left: 50%;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    text-align: right;
+    padding-right: 25px;
+  }
+
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+
+  #myCarousel {
+    /* height: 737px; */
+    background-color: lightgray;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .carousel-inner p {
+    font-size: 26px;
+    width: 285px;
+    position: absolute;
+    top: 419px;
+    right: 25px;
+    text-align: right;
+  }
+
+  .carousel-inner p span {
+    width: auto;
+    margin-right: 0;
+  }
+
+  .carousel-control,
+  .icon_scroll {
+    display: none;
+  }
+
+  .carousel-inner p .image_subtitle {
+    font-size: 14px;
+    width: 238px;
+  }
+
+  .search-form .search-deal input {
+    left: 20%;
+  }
+
+  .search-btn {
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 20%;
+    height: 63px;
+    padding: 0;
+  }
+
+  .stats-info {
+    padding: 80px 0 61px;
+  }
+
+  .stats-info a {
+    margin: 0 auto;
+    width: 280px;
+    display: block;
+    text-align: center;
+  }
+
+  .stats-number {
+    text-align: center;
+  }
+
+  .stats-number span {
+    font-size: 61px;
+  }
+
+  .stats-number p {
+    font-size: 15px;
+  }
+
+  .stats-number p::after {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .stats-info button {
+    width: 280px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .learn-more {
+    padding: 60px 38px 82px;
+  }
+
+  .learn-more div {
+    margin-bottom: 20px;
+  }
+
+  .learn-more div:nth-child(2) {
+    text-align: right;
+  }
+
+  .learn-more div:nth-child(2) ul li {
+    text-align: right;
+  }
+
+  .learn-more div:nth-child(2) ul li:first-child::after {
+    content: "<";
+    text-align: left;
+    left: -200px;
+    width: 0;
+  }
+
+  .lead-text {
+    padding: 37px 21px 43px;
+    font-size: 12px;
+  }
+
+  .about-head,
+  .team h1 {
+    min-height: 136px;
+    height: auto;
+    padding: 60px 0 0;
+    font-size: 24px;
+  }
+
+  .about-head {
+    background-image: url(/images/about_head_m.png);
+  }
+
+  .contact {
+    padding: 32px 20px;
+  }
+
+  .contact .contact-box {
+    padding: 18px 5% 8px;
+  }
+
+  .contact .contact-box h5 {
+    font-size: 12px;
+    margin-top: 0;
+  }
+
+  .contact-info {
+    float: left;
+    width: 50%;
+  }
+
+  .contact .contact-box .contact-info p a {
+    font-size: 12px;
+  }
+
+  .contact .form-content form,
+  .contact .form-content .contact-box {
+    float: none;
+    margin-bottom: 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .contact .form-content button {
+    width: 100%;
+  }
+
+  .team-members {
+    padding-top: 0;
+  }
+
+  /* intro box */
+  #intro-box h2 {
+    margin-bottom: 30px;
+  }
+  .intro-box {
+    padding: 70px 0 44px;
+  }
+
+  .intro-img {
+    margin: 0 35px 35px;
+  }
+
+  .intro-bullet {
+    padding: 0 30px;
+  }
+
+  .tutorial {
+    padding: 0;
+  }
+
+  .tutorial h2 {
+    margin: 40px 0 32px;
+  }
+
+  .tutorial .steps {
+    margin: 0;
+  }
+
+  .tutorial .steps div {
+    width: 100%;
+    float: none;
+  }
+  .tutorial .steps:nth-child(even) .image {
+    float: none;
+  }
+
+  .tutorial .steps .last::after {
+    border-top-color: #326868;
+  }
+  .tutorial .steps .text h3 {
+    margin: 0;
+  }
+
+  .features {
+    padding: 40px 0;
+  }
+
+  .features span.glyphicon {
+    padding-top: 30px;
+  }
+
+  .features p {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .faq {
+    padding: 40px 0 60px;
+  }
+
+  .faq h2 {
+    margin-bottom: 28px;
+  }
+
+  .faq .panel-title {
+    font-size: 14px;
+  }
+
+  .faq .panel-title a {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 20px;
+    max-width: 300px;
+  }
+
+  .faq .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    padding: 14px 20px;
+    font: 13px;
+  }
+}

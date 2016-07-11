@@ -1,0 +1,34 @@
+<div class="navbar navbar-default container-fluid" role="navigation" ng-controller="HeaderCtrl">
+
+		<div class="navbar-header row">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+				<span class="sr-only"> navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar half-width"></span>
+			</button>
+
+			<a class="navbar-brand" href="/"><img src="/images/logo.svg" alt="" /></a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="js-navbar-collapse">
+			<ul class="nav navbar-nav navbar-left hidden-xs">
+				<li>
+					<a href="+tel:+62 202 555 0117" class="nav-phone">
+						<span class="glyphicon glyphicon-earphone"></span>
+						<span class="phone-number">+62 202 555 0117</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a ng-href="/broker">Broker</a></li>
+				<li><a ng-href="/about">About Us</a></li>
+				<li>
+					<a class="login" href="#">
+						<button type="button" class="btn btn-default" ng-click="openLogin()">Login</button>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+</div>

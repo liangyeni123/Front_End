@@ -1,0 +1,108 @@
+<div id="aboutControl" class="container-fluid">
+	<!-- Carousel Image Gallery -->
+  <div id="myCarousel" class="row" ng-include="'views/shared/carousel.html'" ng-controller="CarouselCtrl" ></div>
+
+	<p class="lead-text row">
+		As a Toronto leading Fin Tech company, we are changing the mortgage industry. Investors can be the bank and receive double digit returns secured by real properties; Homeowners will get money much easier, and faster; brokers can now have access to all the private lending capital, close more deals, and service more clients.
+	</p>
+
+	<h1 class="about-head row">A Leading FinTech Company</h1>
+
+	<!-- Contact form -->
+	<div class="contact" id="contact">
+		<h2>Contact Us</h2>
+
+		<div class="form-content row">
+			<p class="form-intro">
+				Be the first in line to get an account on <strong>LendingReal.com</strong>. - Give us your basic informaiton and we will let you know once we have launched.
+			</p>
+
+			<div class="contact-box">
+				<div class="contact-info">
+					<h5>BORROWER ENQUIRIES</h5>
+					<p>
+						<span class="glyphicon glyphicon-earphone"></span>
+						<a href="tel:+622025550117" class="phone-number">+62 202 555 0117</a>
+					</p>
+					<p>
+						<span class="glyphicon glyphicon-envelope"></span>
+						<a href="mailto:hi@wapik.com" class="email">hi@wapik.com</a>
+					</p>
+				</div>
+
+				<div class="contact-info">
+					<h5>INVESTOR SUPPORT</h5>
+					<p>
+						<span class="glyphicon glyphicon-earphone"></span>
+						<a href="tel:+622025550117" class="phone-number">+62 202 555 0117</a>
+					</p>
+					<p>
+						<span class="glyphicon glyphicon-envelope"></span>
+						<a href="mailto:hi@wapik.com" class="email">hi@wapik.com</a>
+					</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+			<form name="customer" class="contact-form" ng-submit="submitCustomer()" required>
+        <p class="form-msg" ng-if="form_msg">
+					{{form_msg}}
+          <a href="" ng-click="closeFormMsg();">X</a>
+				</p>
+				<fieldset>
+					<label>FIRST NAME</label>
+				  <input type="text" name="first_name" ng-model="customerInfo.first_name" required />
+				</fieldset>
+
+				<fieldset>
+					<label>LAST NAME</label>
+				  <input type="text" name="last_name" ng-model="customerInfo.last_name" required />
+				</fieldset>
+
+				<fieldset>
+					<label>EMAIL</label>
+			  	<input type="email" name="email" ng-model="customerInfo.email" required />
+				</fieldset>
+
+				<fieldset>
+					<label>PHONE NUMBER</label>
+			  	<input type="number" name="phone_number" ng-model="customerInfo.phone_number" required />
+				</fieldset>
+
+				<fieldset>
+					<label>MESSAGE</label>
+			  	<textarea type="text" name="message" ng-model="customerInfo.message" required></textarea>
+				</fieldset>
+
+				<button type="submit" class="btn green-btn" ng-disabled="diasble_btn == true">Notify Me</button>
+
+			</form>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+	<!-- Stats Info -->
+  <div class="" ng-include="'/views/shared/stats_info.html'"></div>
+
+	<!-- Team -->
+	<div class="team row">
+		<h1>Our Story So Far</h1>
+    <div class="our-story-timeline">
+      <img  src="images/our_story_so_far.png" alt="" />
+    </div>
+
+		<div class="team-members">
+			<div class="member col-sm-4" ng-repeat="member in team" ng-class="{'col-sm-offset-2':$index==1, 'col-sm-offset-1':$first}">
+				<img src="{{member.img}}" alt="" />
+				<h4>{{member.name}}</h4>
+				<p class="member-title">{{member.title}}</p>
+				<p class="member-desc">{{member.description}}</p>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+</div>

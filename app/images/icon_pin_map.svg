@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="32px" viewBox="0 0 24 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Pinpoint</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="desktop-version" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Page" transform="translate(-1003.000000, -1258.000000)" stroke="#000000" stroke-width="1.5" fill="#FFFFFF">
+            <g id="Search-Deal(list-view)" transform="translate(1.000000, 867.000000)">
+                <path d="M1013.7439,422.153144 C1013.65071,422.040296 1013.80892,422.442552 1013.29334,421.769539 C1011.82001,419.846342 1010.34681,417.81208 1008.97494,415.762385 C1007.94995,414.23095 1007.0219,412.749719 1006.21413,411.34194 C1004.10008,407.657581 1002.92969,404.664001 1002.92969,402.832133 C1002.92969,396.708342 1007.77137,391.744027 1013.7439,391.744027 C1019.71642,391.744027 1024.55811,396.708342 1024.55811,402.832133 C1024.55811,404.664001 1023.38772,407.657581 1021.27367,411.34194 C1020.46589,412.749719 1019.53784,414.23095 1018.51285,415.762385 C1017.14099,417.81208 1015.66779,419.846342 1014.19446,421.769539 C1013.67887,422.442552 1013.7439,422.153144 1013.7439,422.153144 Z" id="Pinpoint"></path>
+            </g>
+        </g>
+    </g>
+</svg>

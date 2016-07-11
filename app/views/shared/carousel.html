@@ -1,0 +1,10 @@
+<uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+  <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+    <img ng-src="{{slide.image}}" style="margin:auto;">
+  </uib-slide>
+	<p class="image_text">
+		<span class="image_title">{{imageText}}</span>
+		<span class="image_subtitle">{{imageSubText}}</span>
+	</p>
+	<img src="/images/icon_mouse.png" class="icon_scroll" alt="" />
+</uib-carousel>
